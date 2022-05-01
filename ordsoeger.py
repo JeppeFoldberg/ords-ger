@@ -14,14 +14,10 @@ def søgestreng():
     # opdaterer pattern så vi bruger den nye word operator - det sikrer at vi fjerne de bogstaver vi har prøvet 
     # hvis der ikke er nogle bogstaver vi har prøvet så kan vi bare bruge \w i søgningen
     if len(sys.argv) == 3:
-        søgestreng = re.sub('_', f'[^{sys.argv[2]}]', søgestreng)
-        # word_operator = f'[^{sys.argv[2]}]'
+        søgestreng = re.sub('_', fr'[^{sys.argv[2]}\\s]', søgestreng)
     else:
-        # der er noget galt med regex her - for nu må man skrive \w når man kalder programmet?
+        # putter \w ind i søgestrengen - af en eller anden grund skal den escapes to gange! 
         søgestreng = re.sub('_', r'\\w', søgestreng)
-        # søgestreng = søgestreng.replace('_', r'\w')
-
-        # pass
 
     print(f'{søgestreng}')
     # print(f'{type(sys.argv[1])}, {sys.argv=}')
