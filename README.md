@@ -6,7 +6,7 @@ Kaldes hangman-style efter denne opskrift
 python ordsoeger.py <search_pattern> <excluded_letters_optional>. 
 
 ## eksempel
-'''
+```
 $ python ordsoeger.py ka_de abcd
 ['kalde', 'kande']
-'''
+```
