@@ -1,5 +1,4 @@
 import re
-import regex
 import sys
 
 def søgestreng():
@@ -9,8 +8,6 @@ def søgestreng():
     # tager det første argument til programmet - søgestrengen
     søgestreng = sys.argv[1]
 
-    # print(f'{sys.argv[1]}, {sys.argv[2]}')
-
     # opdaterer pattern så vi bruger den nye word operator - det sikrer at vi fjerne de bogstaver vi har prøvet 
     # hvis der ikke er nogle bogstaver vi har prøvet så kan vi bare bruge \w i søgningen
     if len(sys.argv) == 3:
@@ -19,8 +16,7 @@ def søgestreng():
         # putter \w ind i søgestrengen - af en eller anden grund skal den escapes to gange! 
         søgestreng = re.sub('_', r'\\w', søgestreng)
 
-    print(f'{søgestreng}')
-    # print(f'{type(sys.argv[1])}, {sys.argv=}')
+    # print(f'{søgestreng=}')
 
     return søgestreng
 
@@ -34,7 +30,6 @@ def main():
     if len(sys.argv) < 2:
         raise SystemExit(f"Usage: {sys.argv[0]} <search_pattern> <excluded_letters_optional>")
 
-    # pattern = søgestreng()
     print(search(søgestreng()))
 
 if __name__ == "__main__":
