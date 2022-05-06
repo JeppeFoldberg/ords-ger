@@ -16,8 +16,6 @@ def søgestreng():
         # putter \w ind i søgestrengen - af en eller anden grund skal den escapes to gange! 
         søgestreng = re.sub('_', r'\\w', søgestreng)
 
-    # print(f'{søgestreng=}')
-
     return søgestreng
 
 def search(pattern: str, wordlist: str = "alle_ord_clean_n5.txt"): 
@@ -40,7 +38,7 @@ def clean_matches(matches: list):
 
 def main():
     if len(sys.argv) < 2:
-        raise SystemExit(f"Usage: {sys.argv[0]} <search_pattern> <excluded_letters_optional>")
+        raise SystemExit(f"Usage: {sys.argv[0]} <search_pattern> <excluded_letters_optional> <included_letters_optional>")
 
     if len(sys.argv) == 4:
         matches = search(søgestreng())
