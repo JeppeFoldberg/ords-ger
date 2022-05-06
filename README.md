@@ -12,5 +12,5 @@ $ python ordsoeger.py ka_de abcd
 ```
 
 ## Ting der kan implementeres
-[x] en måde at inkludere de bogstaver der skal være med i ordet
-[] en måde at inkludere information om hvor bogstaverne ikke må placeres
+- [x] en måde at inkludere de bogstaver der skal være med i ordet
+- [ ] en måde at inkludere information om hvor bogstaverne ikke må placeres
