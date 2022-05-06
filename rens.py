@@ -13,7 +13,9 @@ cleaned_word_list = re.findall(r'^[\d\.\s]*([^;]+);.+$', lines, re.MULTILINE)
 # with open('alle_ord_renset.txt', 'wb') as f:
 #    pickle.dump(cleaned_word_list, f)
 
-cleaned_word_list_n5 = [word for word in cleaned_word_list if len(word) == 5]
+cleaned_word_set = set(cleaned_word_list)
+
+cleaned_word_list_n5 = [word for word in cleaned_word_set if len(word) == 5]
 
 cleaned_words_str = "\n".join(cleaned_word_list_n5)
 
