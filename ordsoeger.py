@@ -26,7 +26,7 @@ def search(pattern: str, wordlist: str = "alle_ord_clean_n5.txt"):
 
     return matches
 
-def clean_matches(matches):
+def clean_matches(matches: list):
     '''
     function that takes matches in and returns a cleaned up list based on the letters that should be included in the fourth sys arg'''
     letters = list(sys.argv[3])
